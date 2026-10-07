@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Message Bridge — Team installation and updates</title>
+<style>
+:root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #182535; background: #f1f5f8; }
+body { max-width: 800px; margin: 32px auto; padding: 40px; background: white; border-radius: 16px; line-height: 1.6; }
+h1 { font-size: 36px; line-height: 1.15; margin: 8px 0 16px; letter-spacing: -1px; }
+h2 { font-size: 23px; margin-top: 34px; line-height: 1.3; }
+.eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: #365e77; font-weight: 700; }
+.intro { font-size: 19px; color: #46596c; }
+.note { border-left: 4px solid #317ba5; background: #eef6fa; padding: 12px 18px; margin: 24px 0; }
+li { margin: 12px 0; padding-left: 4px; }
+a { color: #125e90; text-underline-offset: 3px; }
+.download { display: inline-block; background: #125e90; color: white; text-decoration: none; padding: 12px 22px; border-radius: 8px; font-weight: 600; }
+code { background: #f1f5f8; padding: 2px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border-bottom: 1px solid #d7e0e8; padding: 12px; vertical-align: top; text-align: left; }
+th { background: #f1f5f8; }
+footer { margin-top: 36px; font-size: 13px; color: #526579; border-top: 1px solid #d7e0e8; padding-top: 16px; }
+@media (max-width: 600px) { body { margin: 0; padding: 24px; border-radius: 0; } h1 { font-size: 30px; } th, td { padding: 8px; } }
+@media print { :root { background: white; } body { margin: 0; padding: 0; max-width: none; } h2 { break-after: avoid; } li, tr, .note { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="eyebrow">Message Bridge · Team guide</div>
+<h1>Install once.<br>Get updates in the app.</h1>
+<p class="intro">Download Message Bridge, move it to Applications, and connect your Mac to Messages. No GitHub account or access token is needed.</p>
+<p><a class="download" href="https://github.com/ChrisChasm/message-bridge-releases/releases/latest/download/MessageBridge.zip">Download Message Bridge</a></p>
+<p><a href="https://github.com/ChrisChasm/message-bridge-releases/releases/latest">View the latest release and what changed</a>. The download becomes available when your administrator publishes the first release.</p>
+<div class="note"><strong>Before you start:</strong> You need an Apple silicon Mac (M1 or later), macOS 26 or later, and Messages already signed in and working. Check <strong>Apple menu → About This Mac</strong>. Intel Macs and older macOS versions are not supported by this build.</div>
+<h2>1. Download and install</h2>
+<ol>
+<li>Use the download button above to save <strong>MessageBridge.zip</strong>. On GitHub's release page, the same file is under <strong>Assets</strong>. Do not choose “Source code.”</li>
+<li>Double-click the ZIP in Downloads. Drag <strong>Message Bridge.app</strong> into <strong>Applications</strong>.</li>
+<li>Open Message Bridge from Applications. If macOS asks whether to open an app downloaded from the Internet, choose <strong>Open</strong>. If it instead says the developer cannot be verified, the app is damaged, or malware was detected, stop and ask your administrator for the correct release.</li>
+</ol>
+<p>You do not need Xcode, Terminal, Python, or Node. Closing the window leaves the app running in the menu bar. Click its two-speech-bubble icon to reopen it.</p>
+<h2>2. Connect this Mac to Messages</h2>
+<ol>
+<li>Open <strong>Setup &amp; Settings</strong>. Click <strong>Open Full Disk Access</strong>. In System Settings, enable Message Bridge. If it is missing, use the + button to add it from Applications. Quit and reopen Message Bridge if macOS requests it.</li>
+<li>Click <strong>Verify access</strong>. Allow Message Bridge to control Messages when prompted. You can review this under <strong>System Settings → Privacy &amp; Security → Automation → Message Bridge → Messages</strong>. This access check does not send a message.</li>
+<li>Under <strong>Sending account</strong>, select the Messages account you intend to use. Confirm the account belongs to you. Contacts access is optional.</li>
+<li>If macOS requests Keychain access for <strong>MessageBridgeKeychain</strong>, the helper inside Message Bridge, approve it. <strong>Always Allow</strong> avoids repeated requests for the same helper. Enter your Mac password only in the macOS prompt. This protects your local app data and AI connections; software downloads do not need a token.</li>
+<li>Optionally enable <strong>Start Message Bridge at Login</strong>, then choose <strong>Complete setup</strong> or <strong>Apply startup setting</strong>.</li>
+</ol>
+<h2>3. Connect your AI app</h2>
+<ol>
+<li>Open <strong>AI Clients</strong> and select your client, such as Codex Desktop, Claude Desktop, Cursor, or LM Studio.</li>
+<li>Follow that client's setup card to install its connection. Restart or reconnect the AI client when instructed.</li>
+<li>Choose <strong>Copy setup prompt</strong> and paste it into your AI client. It checks the connection without sending a message. Look for <strong>Connected</strong> in Message Bridge.</li>
+</ol>
+<p>Each Mac keeps its own account, history, and client connections. Do not copy another teammate's app data or credentials. Before normal use, agree on one controlled recipient and explicitly confirm the message in your AI app.</p>
+<h2>4. Get updates</h2>
+<ol>
+<li>In <strong>Setup &amp; Settings → Software updates</strong>, enable <strong>Check daily for updates</strong>. Checks run while Message Bridge is open and the Mac is available. A check may run shortly after launch when one is due.</li>
+<li>Click <strong>Check for Updates…</strong> for an immediate check. The same command is in the menu bar dropdown.</li>
+<li>When an update is available, follow its download/install prompt. You choose when to install. Installation waits for active sends to finish, then the app relaunches.</li>
+<li>Check the new version/build in Software updates. Your settings and saved history stay on this Mac. Reconnect your AI client if needed.</li>
+</ol>
+<p>If you skip a version, a manual check lets you reconsider. Settings also shows the last successful check and a link to release notes. No account, password, token, or terminal command is needed to download updates.</p>
+<h2>If something needs attention</h2>
+<table>
+<thead><tr><th>What you see</th><th>What to do</th></tr></thead>
+<tbody>
+<tr><td>Download page says 404</td><td>The first release may not be published yet. Ask your administrator. You do not need to sign into GitHub.</td></tr>
+<tr><td>Update check did not complete</td><td>Check your Internet connection and open the download page. Try again later if GitHub is unavailable.</td></tr>
+<tr><td>Wait for the current send</td><td>Unlock your Mac, let the send finish, and check again. Updates do not retry interrupted sends.</td></tr>
+<tr><td>Cannot open or install an update</td><td>Confirm macOS 26+ and Apple silicon, that the app is in Applications, and that your Mac permits replacing it. Ask your administrator if the signed release is still rejected.</td></tr>
+<tr><td>AI client needs attention after restart</td><td>Reconnect the client and run its setup prompt again. Do not resend an earlier message just to test the connection.</td></tr>
+</tbody>
+</table>
+<h2>Manual recovery</h2>
+<p>If in-app updates cannot run, quit Message Bridge, download the latest signed <strong>MessageBridge.zip</strong>, and replace only <strong>Applications → Message Bridge.app</strong>. Reopen it and verify access. Keep the app's saved data and Keychain items. Ask your administrator before downgrading.</p>
+<p>When asking for help, include your macOS version, Message Bridge version/build, and the exact error. Do not share AI credentials or private message history.</p>
+<footer>This guide is included under <strong>Software updates → Installation &amp; update guide</strong>. Open it offline or print it to PDF from your browser. Team distribution · October 2026.</footer>
+</body>
+</html>
